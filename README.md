@@ -1,2 +1,4 @@
 # dirck.github.io
-home page
+
+Keeping track of important life events.
+

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>It has been X days</title>
+
+<script type="text/javascript">
+
+var items = [
+    ["It has been", "2023-01-18", "days since dirck spilled his smoothie"],
+    ["It has been", "2023-01-20", "days since dirck set off the car alarm"],
+];
+
+function main() {
+    var a = ["Today is "+(new Date()).toLocaleDateString()];
+
+    for (const item of items) {
+        a.push(render(item[0],item[1],item[2]));
+    }
+    set_html("shower", a.join("\n"));
+}
+
+function render(pre,d,post) {
+    return "<h2>"+pre + ' <span class="number">' + days_since(d) + "</span> " + post + "</h2>"
+}
+
+function days_since(s) {
+    var d = (new Date()) - (new Date(s));
+    return Math.trunc(d/(24*60*60*1000));
+}
+
+function set_html(id, s) {
+    item = document.getElementById(id);
+    if (item) {
+        item.innerHTML = s;
+    }
+}
+
+</script>
+<style>
+body {
+    background-color: #f0f0f0;
+}
+span.number {
+    background-color: white;
+    border-style: ridge;
+}
+</style>
+</head>
+<body onload="main()">
+<div id="shower">
+</div>
+</body>
+</html>
