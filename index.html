@@ -6,12 +6,12 @@
 <script type="text/javascript">
 
 var items = [
-    ["It has been", "2023-01-18", "days since dirck spilled his smoothie"],
-    ["It has been", "2023-01-20", "days since dirck set off the car alarm"],
+    ["It has been", "2023-01-18", "days since<br>\tdirck spilled his smoothie"],
+    ["It has been", "2023-01-20", "days since<br>\tdirck set off the car alarm"],
 ];
 
 function main() {
-    var a = ["Today is "+(new Date()).toLocaleDateString()];
+    var a = ["<h3>Today is "+(new Date()).toLocaleDateString()+"</h3>"];
 
     for (const item of items) {
         a.push(render(item[0],item[1],item[2]));
@@ -50,11 +50,25 @@ span.number {
 <div id="shower">
 </div>
 <a href="https://www.youtube.com/watch?v=k26aeJL1x44"
-><img src="https://avatars.githubusercontent.com/u/7244743?s=120&v=4"
+><img src="monarch.png"
       alt="Isn't that the guy from dee-pech mode?"
       title="I saw a whole thing about him on the VH1"
-      width="120"
-      height="120"
-></a>
+      width="128"
+      height="128"
+></a
+><p><a rel="nofollow me" href="https://hachyderm.io/@dirckb"
+><img src="mastodon64.png"
+      alt="mastodon logo"
+      title="on mastodon @dirckb@hachyderm.io"
+      width="64"
+      height="64"
+></a
+><a rel="nofollow me" href="https://github.com/dirck"
+    ><img src="github-mark.png"
+          alt="github logo"
+          title="dirck on github"
+          width="60"
+          height="60"
+    ></a>
 </body>
 </html>
